@@ -1,0 +1,53 @@
+baseurl: https://www.dgm-lausanne.ch
+title: DGM & CR Lausanne
+languageCode: fr
+DefaultContentLanguage: fr
+paginate: '10'
+theme: hugo-dpsg
+Params:
+  authorbox: no
+  copyright: DGM & CR Lausanne
+  dateformat: 02.01.2006
+  description: Welcome to our scout group!
+  footer:
+    text: '[Imprint and Privacy](/imprint)'
+  indexPager: yes
+  logo:
+    header: images/design/header2.png
+    image: images/design/logo.png
+    title: DGM & CR Lausanne
+  mainSections:
+    - post
+    - blog
+    - news
+  opengraph: yes
+  pager: yes
+  post_meta:
+    - author
+    - date
+    - categories
+    - translations
+  readmore: no
+  schema: yes
+  sidebar:
+    home: right
+    list: left
+    single: no
+    widgets:
+      - search
+      - recent
+      - categories
+  style:
+    vars:
+      highlightColor: '#333582'
+  toc: no
+  twitter_cards: no
+  widgets:
+    recent_num: 5
+    tags_counter: no
+# menu:
+#   main:
+#     - identifier: about
+#       name: About
+#       url: /about/
+#       weight: 2
