@@ -20,12 +20,11 @@ jobs:
       - name: Render blog
         run: Rscript -e 'blogdown::build_site()'
       - name: Install SSH Key
-       uses: shimataro/ssh-key-action@v2
-       with:
+        uses: shimataro/ssh-key-action@v2
+        with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: 'placeholder'
-     - name: Adding Known Hosts
-       run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-     - name: Deploy with rsync
-       run: rsync -avz ./public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/dgm/
-
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy with rsync
+        run: rsync -avz ./public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/dgm/
