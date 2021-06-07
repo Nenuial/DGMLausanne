@@ -26,7 +26,7 @@ jobs:
 
   checkout-and-deploy:
    name: Deploy-Blog
-   runs-on: macOS-latest
+   runs-on: ubuntu-latest
    needs: blogdown
    steps:
      - name: Install SSH Key
