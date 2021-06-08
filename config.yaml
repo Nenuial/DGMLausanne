@@ -35,7 +35,6 @@ Params:
     list: left
     single: no
     widgets:
-      - search
       - recent
       - categories
   style:
