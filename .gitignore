@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 public
+content/**/*.html
+static/*_files
+static/*_cache
