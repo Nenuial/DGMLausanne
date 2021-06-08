@@ -6,3 +6,4 @@ public
 content/**/*.html
 static/*_files
 static/*_cache
+static/rmarkdown-libs
