@@ -1,10 +1,11 @@
 ---
+title: Accueil
+page: true
 menu:
   main:
+    identifier: index
     name: Accueil
     weight: 1
-page: true
-title: Accueil
 ---
 
 # Les DGM & CR de Lausanne

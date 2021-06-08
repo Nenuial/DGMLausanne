@@ -1,0 +1,42 @@
+---
+title: Concours 2021
+page: true
+menu:
+  main:
+    identifier: concours
+    name: Concours
+    url: /concours/
+    weight: 2
+---
+
+## Saut - 3 et 4 juillet
+
+[<i class="fas fa-file-pdf"></i> Plan sanitaire pour le concours de Saut](/files/2021/concours/plan_sanitaire_saut.pdf)
+
+### Samedi 3 juillet
+
+- B100 Style
+- B100 Style
+- B75 A sans chrono
+- B85 A sans chrono
+
+### Dimanche 4 juillet
+
+- R100 A au chrono
+- R105 A au chrono en deux phases
+- R110 A au chrono
+- R115 A au chrono en deux phases
+
+## Dressage - 10 et 11 juillet
+
+[<i class="fas fa-file-pdf"></i> Plan sanitaire pour le concours de Dressage](/files/2021/concours/plan_sanitaire_dressage.pdf)
+
+### Samedi 10 juillet
+
+- FB 04/60
+- FB 06/60
+
+### Dimanche 11 juillet
+
+- L12/60
+- L14/60

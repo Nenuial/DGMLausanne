@@ -8,9 +8,10 @@ Params:
   authorbox: no
   copyright: DGM & CR Lausanne
   dateformat: 02.01.2006
-  description: Welcome to our scout group!
+  description: Bienvenue sur le site des DGM & CR de Lausanne !
+  customCSS: ["fontawesome/css/all.css"]
   footer:
-    text: '[Imprint and Privacy](/imprint)'
+    text: "[Conditions d'utilisation](/imprint)"
   indexPager: yes
   logo:
     header: images/design/header2.png
@@ -45,9 +46,4 @@ Params:
   widgets:
     recent_num: 5
     tags_counter: no
-# menu:
-#   main:
-#     - identifier: about
-#       name: About
-#       url: /about/
-#       weight: 2
+

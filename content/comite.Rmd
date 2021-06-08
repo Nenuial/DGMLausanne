@@ -1,0 +1,17 @@
+---
+title: Comité
+page: true
+menu:
+  main:
+    name: Comité
+    url: /comite/
+    weight: 10
+---
+
+La composition du comité est actuellement la suivante :
+
+- **Président:** Bernard Rochat
+- **Caissier:** Dominique Tille
+- **Secrétaire:** Camille Légeret-Manuel
+- **Membre:** Florence Rochat
+- **Membre:** Tobia Schlub
