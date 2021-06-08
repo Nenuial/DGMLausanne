@@ -18,7 +18,7 @@ jobs:
       - name: Install Hugo
         run: Rscript -e 'blogdown::install_hugo()'
       - name: Render blog
-        run: Rscript -e 'rmarkdown::render_site(encoding = "UTF-8")'
+        run: Rscript -e 'blogdown::build_site(local = FALSE, run_hugo = TRUE, build_rmd = FALSE)'
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
