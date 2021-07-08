@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: Rscript -e 'install.packages(c("reactable"))'
       - name: Install rmarkdown
-        run: Rscript -e 'install.packages(c("rmarkdown","blogdown")'
+        run: Rscript -e 'install.packages(c("rmarkdown","blogdown"))'
       - name: Install Hugo
         run: Rscript -e 'blogdown::install_hugo()'
       - name: Render blog
