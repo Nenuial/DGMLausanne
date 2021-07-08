@@ -18,7 +18,7 @@ jobs:
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","blogdown"))'
       - name: Install Hugo
-        run: Rscript -e 'blogdown::install_hugo()'
+        run: Rscript -e 'blogdown::install_hugo("0.83.1")'
       - name: Render blog
         run: Rscript -e 'blogdown::build_site(local = FALSE, run_hugo = TRUE, build_rmd = TRUE)'
       - name: Install SSH Key
