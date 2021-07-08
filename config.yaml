@@ -9,7 +9,7 @@ Params:
   copyright: DGM & CR Lausanne
   dateformat: 02.01.2006
   description: Bienvenue sur le site des DGM & CR de Lausanne !
-  customCSS: ["fontawesome/css/all.css"]
+  customCSS: ["css/custom.css", "fontawesome/css/all.css"]
   footer:
     text: "[Conditions d'utilisation](/imprint)"
   indexPager: yes

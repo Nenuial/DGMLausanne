@@ -1,0 +1,64 @@
+---
+title: Résultats provisoires
+summary: "Résultat provisoire pour les épreuves de dressage."
+date: 2021-07-10
+draft: yes
+---
+
+## Épreuve en cours
+
+Cette page affiche les résultats provisoires de l'épreuve en cours.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval=FALSE, include=FALSE}
+library(reactable)
+library(dplyr)
+
+fs::dir_ls(here::here("data/provisional"), regexp = "[.]xls") |> 
+  readr::read_tsv(locale = readr::locale(encoding = "ISO-8859-1")) |> 
+  rename_with(~ stringr::str_replace(.x, pattern = "Punkte \\(richter ([HCM])\\)", replacement = "\\1")) |> 
+  select(Rang, Cavalier = Reiter, Cheval = `Name Pferd`, 
+         matches("^[HCM]$"),
+         Total = `Total Punkte`, `%` = Gesamttotal) |> 
+  arrange(Rang) -> provisional_results
+
+provisional_results |> 
+  names() |> 
+  stringr::str_extract("^[HCM]$") |> 
+  na.omit() -> judges_cols
+
+provisional_results |> 
+  reactable(
+    defaultSorted = "Rang",
+    defaultSortOrder = "asc",
+    defaultColGroup = colGroup(headerClass = "group-header"),
+    defaultColDef = colDef(
+      class = "cell", headerClass = "header", 
+      format = colFormat(digits = 1)
+    ),
+    columnGroups = list(
+      colGroup(name = "Juge", columns = judges_cols),
+      colGroup(name = "Résultat", columns = c("Total", "%"))
+    ),
+    columns = list(
+      Rang = colDef(
+        format = colFormat(digits = NULL)
+      ),
+      `%` = colDef(
+        format = colFormat(digits = 2, suffix = " %")
+      )
+    ),
+    showSortable = TRUE,
+    theme = reactableTheme(
+      backgroundColor = "#1fe0",
+      stripedColor = "#1fe0",
+      highlightColor = "#1fe0",
+      style = list(
+        background = "#1fe0"
+      ),
+      groupHeaderStyle = list(
+        background = "#1fe0"
+      )
+    )
+  )
+```
+

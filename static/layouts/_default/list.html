@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main class="main list" role="main">
+	{{- with .Title }}
+	<header class="main__header">
+		<h1 class="main__title">{{ . }}</h1>
+	</header>
+	{{- end }}
+	{{- with .Content }}
+	<div class="content main__content clearfix">
+		{{ . }}
+	</div>
+	{{- end }}
+	{{- range .Paginator.Pages }}
+		{{ with .Description }}
+      {{ $.Scratch.Set "summary" (markdownify .) }}
+    {{ else }}
+      {{ $.Scratch.Set "summary"
+      ((delimit (findRE "(<p.*?>.*?</p>\\s*)+" .Content) "[&hellip;] ") |
+        plainify |
+        truncate (default 200 .Site.Params.summary_length)
+          (default " &hellip;" .Site.Params.text.truncated ) |
+        replaceRE "&amp;" "&" | safeHTML) }}
+      {{ end }}
+    {{ $.Scratch.Get "summary" }}
+	{{- end }}
+</main>
+{{ partial "pagination.html" . }}
+{{ end }}

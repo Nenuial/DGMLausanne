@@ -1,0 +1,9 @@
+---
+title: Programme dressage
+summary: "Mise en ligne du programme du concours de dressage."
+date: 2021-07-08
+---
+
+## Programme du concours de Dressage
+
+Le programme du concours de dressage a été ajouté sur la [page des concours](/concours/).
