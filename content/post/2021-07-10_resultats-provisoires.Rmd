@@ -2,14 +2,13 @@
 title: Résultats provisoires
 summary: "Résultat provisoire pour les épreuves de dressage."
 date: 2021-07-10
-draft: yes
 ---
 
-## Épreuve en cours
+## Épreuve en cours : FB 04/60 - Prix EquiChablais
 
 Cette page affiche les résultats provisoires de l'épreuve en cours.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval=FALSE, include=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(reactable)
 library(dplyr)
 
